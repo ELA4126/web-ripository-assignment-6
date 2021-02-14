@@ -20,10 +20,7 @@ const showImages = (images) => {
   // show gallery title
   galleryHeader.style.display = 'flex';
 
-//   if ( search.value = (0)){
-//     alert('sorry!!! we did not find any match!');
-//   } 
-// else{
+
   images.forEach(image => {
     let div = document.createElement('div');
     div.className = 'col-lg-3 col-md-4 col-xs-6 img-item mb-2';
@@ -31,8 +28,6 @@ const showImages = (images) => {
     gallery.appendChild(div)
   });
 }
-
-// }
 
 const getImages = (query) => {
   fetch(`https://pixabay.com/api/?key=${KEY}=${query}&image_type=photo&pretty=true`)
